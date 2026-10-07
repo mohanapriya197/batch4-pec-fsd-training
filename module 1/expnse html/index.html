@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Expense Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Personal Expense Calculator</h1>
+        <p class="subtitle">Track your income, expenses and savings</p>
+
+        <!-- Income -->
+        <div class="card">
+            <h2>Monthly Income</h2>
+
+            <label for="income">Enter your income:</label>
+            <input type="number" id="income" placeholder="Enter income">
+        </div>
+
+        <!-- Expenses -->
+        <div class="card">
+            <h2>Expenses</h2>
+
+            <div class="expense-item">
+                <label for="food">Food</label>
+                <input type="number" id="food" placeholder="₹0">
+            </div>
+
+            <div class="expense-item">
+                <label for="transport">Transport</label>
+                <input type="number" id="transport" placeholder="₹0">
+            </div>
+
+            <div class="expense-item">
+                <label for="housing">Housing</label>
+                <input type="number" id="housing" placeholder="₹0">
+            </div>
+
+            <div class="expense-item">
+                <label for="education">Education</label>
+                <input type="number" id="education" placeholder="₹0">
+            </div>
+
+            <div class="expense-item">
+                <label for="entertainment">Entertainment</label>
+                <input type="number" id="entertainment" placeholder="₹0">
+            </div>
+
+            <div class="expense-item">
+                <label for="other">Other</label>
+                <input type="number" id="other" placeholder="₹0">
+            </div>
+
+            <button onclick="calculateExpenses()">Calculate</button>
+        </div>
+
+        <!-- Summary -->
+        <div class="card summary" id="summary">
+
+            <h2>Summary Report</h2>
+
+            <div class="result">
+                <span>Income</span>
+                <strong id="displayIncome">₹0.00</strong>
+            </div>
+
+            <div class="result">
+                <span>Total Expenses</span>
+                <strong id="displayExpenses">₹0.00</strong>
+            </div>
+
+            <div class="result">
+                <span>Savings</span>
+                <strong id="displaySavings">₹0.00</strong>
+            </div>
+
+            <div class="result">
+                <span>Savings Rate</span>
+                <strong id="displayPercentage">0%</strong>
+            </div>
+
+            <h3>Expense Breakdown</h3>
+
+            <div id="expenseBreakdown"></div>
+
+            <p id="status"></p>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
